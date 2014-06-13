@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="libs/commons-io-2.1.jar"/>
+	<classpathentry kind="lib" path="libs/commons-io.jar"/>
+	<classpathentry kind="lib" path="libs/commons-net-3.1.jar"/>
+	<classpathentry kind="lib" path="libs/commons-net.jar"/>
+	<classpathentry kind="lib" path="libs/hadoop-client-2.0.0-mr1-cdh4.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/hive-exec-0.10.0-cdh4.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/hadoop-common-2.0.0-cdh4.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/hadoop-core-2.0.0-mr1-cdh4.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/hadoop-hdfs-2.0.0-cdh4.5.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
