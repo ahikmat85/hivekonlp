@@ -1,7 +1,12 @@
-Korean Language NLP on Hive
+Processing NLP on Hive for Korean (hangul) language!
 
 Apache Hive supports adding custom UDF(User Defined Functions) 
 Using this we can process Natural Language Processing and pre-procsesing on Hive. This will speed up NLP by running it on Hadoop nodes.
+
+Contents:
+  handic -> config and dictionary folder for NLP. Put it the root folder on all hadoop nodes.
+  hivekonlp-> java source code, ant based project (hadoop,hive libraries are attached to the project)
+  hivekonlp.jar -> compiled binary
 
 Usage:
   
