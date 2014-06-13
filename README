@@ -1,1 +1,33 @@
-Hive KoNLP Analyzer
+Korean Language NLP on Hive
+
+Apache Hive supports adding custom UDF(User Defined Functions) 
+Using this we can process Natural Language Processing and pre-procsesing on Hive. This will speed up NLP by running it on Hadoop nodes.
+
+Usage:
+  
+  Extracting Nouns
+  >select extractNoun(text) from twitter;
+  
+  input: "이명박근혜 10년동안 앵무새 나팔수 역할을 수행했던 언론인들은 기록해놨다가 나중에 꼭 그 댓가를 지불해주자"
+  output: "이명박근혜 10년 앵무새 나팔수 역할 수행 언론 기록해놨다 나중 댓가 지불 "
+
+  Filtering Tweets (Pre-processing)
+  >select filterTweet(text) from twitter;
+  
+  output: "이명박근혜 10년동안 앵무새 나팔수 역할을 수행했던 언론인들은 기록해놨다가 나중에 꼭 그 댓가를 지불해주자"
+
+Installation:
+  Export the project as a jar file. Or use the compiled jar file "hivekonlp.jar"
+  Launch the hive CLI.
+  
+  >add jar /hive_extension.jar;
+  >create temporary function extractNoun as 'com.kh.pluginhive.ExtractNoun';
+  >create temporary function filterTweet as 'com.kh.pluginhive.FilterTweet';
+  
+  or, add this script to your /etc/hive/conf/.hiverc
+
+This project uses open-source Hannanum Analyzer 
+"HanNanum is a Korean Morphological Analyzer and POS Tagger. A plug-in component-based architecture is adapted to the new Java version for flexible use."
+http://sourceforge.net/projects/hannanum/
+
+Hive으로 한나눔 한국어 형태소 분석
